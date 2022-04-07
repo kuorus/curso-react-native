@@ -1,0 +1,40 @@
+{
+  "recipes": [
+    {
+      "name": "Espresso",
+      "method": "Espresso machine",
+      "coffeeQt": 7,
+      "waterQt": 28
+    },
+    {
+      "name": "Lungo",
+      "method": "Espresso machine",
+      "coffeeQt": 7,
+      "waterQt": 56
+    },
+    {
+      "name": "Moka",
+      "method": "Moka pot",
+      "coffeeQt": 10,
+      "waterQt": 80
+    },
+    {
+      "name": "Drip",
+      "method": "Filter coffee maker",
+      "coffeeQt": 15,
+      "waterQt": 240
+    },
+    {
+      "name": "French press",
+      "method": "French press",
+      "coffeeQt": 15,
+      "waterQt": 180
+    },
+    {
+      "name": "Turkish",
+      "method": "Cezve",
+      "coffeeQt": 30,
+      "waterQt": 350
+    }
+  ]
+}
