@@ -1,10 +1,7 @@
 import React from 'react'
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  useColorScheme,
-} from 'react-native'
+import { SafeAreaView, ScrollView, StatusBar, useColorScheme } from 'react-native'
+import CoffeeClass from './components/CoffeeClass'
+import CoffeeFunction from './components/CoffeeFunction'
 
 const App = () => {
   /** arrow functions, const / let, template strings, ternary (KEKO) **/
@@ -75,10 +72,18 @@ const App = () => {
  */
   const isDarkMode = useColorScheme() === 'dark'
 
+  const cafes = loadCafes()
+
   return (
     <SafeAreaView>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView contentInsetAdjustmentBehavior="automatic"></ScrollView>
+      <ScrollView contentInsetAdjustmentBehavior="automatic">
+        <CoffeeClass cafe={cafes[0]} />
+        <CoffeeFunction cafe={cafes[0]} />
+        {cafes.map(cafe => (
+          <CoffeeFunction key={cafe.id} cafe={cafe} />
+        ))}
+      </ScrollView>
     </SafeAreaView>
   )
 }

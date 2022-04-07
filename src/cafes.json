@@ -1,36 +1,42 @@
 {
   "recipes": [
     {
+      "id": 1,
       "name": "Espresso",
       "method": "Espresso machine",
       "coffeeQt": 7,
       "waterQt": 28
     },
     {
+      "id": 2,
       "name": "Lungo",
       "method": "Espresso machine",
       "coffeeQt": 7,
       "waterQt": 56
     },
     {
+      "id": 3,
       "name": "Moka",
       "method": "Moka pot",
       "coffeeQt": 10,
       "waterQt": 80
     },
     {
+      "id": 4,
       "name": "Drip",
       "method": "Filter coffee maker",
       "coffeeQt": 15,
       "waterQt": 240
     },
     {
+      "id": 5,
       "name": "French press",
       "method": "French press",
       "coffeeQt": 15,
       "waterQt": 180
     },
     {
+      "id": 6,
       "name": "Turkish",
       "method": "Cezve",
       "coffeeQt": 30,
