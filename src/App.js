@@ -82,7 +82,7 @@ const App = () => {
         <CoffeeClass cafe={cafes[0]} />
         <CoffeeFunction cafe={cafes[0]} />
         {cafes.map(cafe => (
-          <Coffee key={cafe.id} cafe={cafe} fromJson={true} />
+          <Coffee key={cafe.id} cafe={cafe} fromJson={true} discount={0.2} />
         ))}
       </ScrollView>
     </SafeAreaView>

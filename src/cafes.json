@@ -5,42 +5,48 @@
       "name": "Espresso",
       "method": "Espresso machine",
       "coffeeQt": 7,
-      "waterQt": 28
+      "waterQt": 28,
+      "price": 1.50
     },
     {
       "id": 2,
       "name": "Lungo",
       "method": "Espresso machine",
       "coffeeQt": 7,
-      "waterQt": 56
+      "waterQt": 56,
+      "price": 1.70
     },
     {
       "id": 3,
       "name": "Moka",
       "method": "Moka pot",
       "coffeeQt": 10,
-      "waterQt": 80
+      "waterQt": 80,
+      "price": 1.95
     },
     {
       "id": 4,
       "name": "Drip",
       "method": "Filter coffee maker",
       "coffeeQt": 15,
-      "waterQt": 240
+      "waterQt": 240,
+      "price": 2.25
     },
     {
       "id": 5,
       "name": "French press",
       "method": "French press",
       "coffeeQt": 15,
-      "waterQt": 180
+      "waterQt": 180,
+      "price": 1.45
     },
     {
       "id": 6,
       "name": "Turkish",
       "method": "Cezve",
       "coffeeQt": 30,
-      "waterQt": 350
+      "waterQt": 350,
+      "price": 2.00
     }
   ]
 }
