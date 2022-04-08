@@ -19,7 +19,7 @@ const App = () => {
   return (
     <SafeAreaView>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View>
+      <View style={{ marginBottom: 50 }}>
         <Text>Total coffee recipes: {cafes.length}</Text>
         <FlatList data={cafes} renderItem={({ item }) => <Coffee cafe={item} discount={0.2} />} />
       </View>
