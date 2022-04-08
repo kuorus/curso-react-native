@@ -1,5 +1,5 @@
-import React from 'react'
-import { FlatList, SafeAreaView, ScrollView, StatusBar, useColorScheme } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { FlatList, SafeAreaView, StatusBar, Text, useColorScheme, View } from 'react-native'
 import Coffee from './components/Coffee'
 
 const App = () => {
@@ -10,14 +10,19 @@ const App = () => {
 
   const isDarkMode = useColorScheme() === 'dark'
 
-  const cafes = loadCafes()
+  const [cafes, setCafes] = useState([])
+
+  useEffect(() => {
+    setCafes(loadCafes())
+  }, [])
 
   return (
     <SafeAreaView>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <FlatList data={cafes} renderItem={({ item }) => <Coffee cafe={item} discount={0.2} />} scrollEnabled={false} />
-      </ScrollView>
+      <View>
+        <Text>Total coffee recipes: {cafes.length}</Text>
+        <FlatList data={cafes} renderItem={({ item }) => <Coffee cafe={item} discount={0.2} />} />
+      </View>
     </SafeAreaView>
   )
 }
