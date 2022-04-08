@@ -2,6 +2,7 @@ import React from 'react'
 import { SafeAreaView, ScrollView, StatusBar, useColorScheme } from 'react-native'
 import CoffeeClass from './components/CoffeeClass'
 import CoffeeFunction from './components/CoffeeFunction'
+import Coffee from './components/Coffee'
 
 const App = () => {
   /** arrow functions, const / let, template strings, ternary (KEKO) **/
@@ -81,7 +82,7 @@ const App = () => {
         <CoffeeClass cafe={cafes[0]} />
         <CoffeeFunction cafe={cafes[0]} />
         {cafes.map(cafe => (
-          <CoffeeFunction key={cafe.id} cafe={cafe} />
+          <Coffee key={cafe.id} cafe={cafe} fromJson={true} />
         ))}
       </ScrollView>
     </SafeAreaView>
