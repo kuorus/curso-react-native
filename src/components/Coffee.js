@@ -1,7 +1,8 @@
 import { Text, View, StyleSheet } from 'react-native'
 import React from 'react'
+import ButtonView from './UI/Button/View'
 
-const Coffee = ({ cafe, discount }) => {
+const Coffee = ({ cafe, discount, setLoading }) => {
   const styles = StyleSheet.create({
     container: {
       padding: 10,
@@ -24,6 +25,14 @@ const Coffee = ({ cafe, discount }) => {
 
   return (
     <View style={styles.container}>
+      <ButtonView
+        color={'red'}
+        text={'Soy un botón'}
+        onPress={() => {
+          setLoading(true)
+          setTimeout(() => setLoading(false), 1000)
+        }}
+      />
       <Text style={styles.text}>Name: {cafe.name}</Text>
       <Text style={styles.text}>Method: {cafe.method}</Text>
       <Text style={styles.text}>Coffee qt.: {cafe.coffeeQt} g.</Text>
