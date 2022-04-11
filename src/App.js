@@ -1,20 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { FlatList, SafeAreaView, StatusBar, Text, useColorScheme, View } from 'react-native'
 import Coffee from './components/Coffee'
 
 const App = () => {
-  function loadCafes() {
-    const cafes = require('./cafes.json')
-    return cafes.recipes
-  }
+  const loadCafes = useMemo(() => {
+    console.log('Una vez')
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const cafes = require('./cafes.json')
+        resolve(cafes.recipes)
+      }, 500)
+    })
+  }, [])
 
   const isDarkMode = useColorScheme() === 'dark'
 
   const [cafes, setCafes] = useState([])
 
   useEffect(() => {
-    setCafes(loadCafes())
-  }, [])
+    loadCafes.then(resCafes => setCafes(resCafes))
+  }, [loadCafes])
 
   return (
     <SafeAreaView>
