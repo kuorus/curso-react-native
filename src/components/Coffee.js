@@ -12,7 +12,7 @@ const Coffee = ({ cafe, discount }) => {
       color: '#323232',
       fontSize: 15,
       margin: 2,
-      paddingLeft: 10 + cafe.name.length * 5,
+      paddingLeft: 10,
     },
     discount: {
       borderColor: '#de3232',

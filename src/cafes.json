@@ -25,14 +25,6 @@
       "price": 1.95
     },
     {
-      "id": 4,
-      "name": "Drip",
-      "method": "Filter coffee maker",
-      "coffeeQt": 15,
-      "waterQt": 240,
-      "price": 2.25
-    },
-    {
       "id": 5,
       "name": "French press",
       "method": "French press",

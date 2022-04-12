@@ -10,12 +10,12 @@ const cafesReducer = (state = initialState, action) => {
     case 'LOAD_JSON':
       return {
         ...state,
-        cafes: action.cafes,
+        cafes: action.cafes.reverse(),
       }
     case 'ADD_CAFE':
       return {
         ...state,
-        cafes: state.cafes.concat(action.cafe),
+        cafes: [action.recipe, ...state.cafes],
       }
     case 'SET_DISCOUNT':
       return {
@@ -30,10 +30,10 @@ const cafesReducer = (state = initialState, action) => {
 export const loadCafes = () => {
   console.log('loadCafes')
   const resCafes = require('./cafes.json')
-  /**store.dispatch({
+  store.dispatch({
     type: 'LOAD_JSON',
     cafes: resCafes.recipes,
-  })*/
+  })
   return resCafes.recipes
 }
 
@@ -49,4 +49,4 @@ export const setDiscount = discount => {
   }
 }
 
-export const store = createStore(cafesReducer, loadCafes())
+export const store = createStore(cafesReducer)

@@ -1,26 +1,22 @@
-import React, { useState } from 'react'
-import { SafeAreaView, StatusBar, Text, useColorScheme } from 'react-native'
-import CoffeeList from './components/CoffeeList/View'
-import CoffeeForm from './components/CoffeeForm/View'
+import React, { useEffect } from 'react'
+import { SafeAreaView, StatusBar, useColorScheme } from 'react-native'
+import CoffeeList from './components/CoffeeList'
+import CoffeeForm from './components/CoffeeForm'
 import { Provider } from 'react-redux'
-import { store } from './store'
+import { loadCafes, store } from './store'
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark'
 
-  const [newCoffee, setNewCoffee] = useState({ name: '', cost: '' })
-
-  /*  useEffect(() => {
+  useEffect(() => {
     loadCafes()
   })
-*/
+
   return (
     <Provider store={store}>
-      <SafeAreaView>
+      <SafeAreaView style={{ flex: 1 }}>
         <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <CoffeeForm setNewCoffee={setNewCoffee} />
-        <Text>{newCoffee.name}</Text>
-        <Text>{newCoffee.cost}</Text>
+        <CoffeeForm />
         <CoffeeList />
       </SafeAreaView>
     </Provider>
