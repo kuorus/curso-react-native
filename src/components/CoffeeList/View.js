@@ -1,23 +1,11 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React from 'react'
 import Title from '../UI/Title/View'
 import { FlatList } from 'react-native'
 import Coffee from '../Coffee'
+import { useSelector } from 'react-redux'
 
 const CoffeeListView = () => {
-  const [cafes, setCafes] = useState([])
-
-  const loadCafes = useMemo(() => {
-    return new Promise((resolve, _reject) => {
-      setTimeout(() => {
-        const resCafes = require('./../../cafes.json')
-        resolve(resCafes.recipes)
-      }, 500)
-    })
-  }, [])
-
-  useEffect(() => {
-    loadCafes.then(resCafes => setCafes(resCafes))
-  }, [loadCafes])
+  const cafes = useSelector(state => state)
 
   return (
     <>
