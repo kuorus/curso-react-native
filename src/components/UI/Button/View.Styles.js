@@ -1,24 +1,8 @@
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { mainColors } from '../../../styles/colors'
 import { mainFonts } from '../../../styles/fonts'
 
-interface Style extends Record<string, ViewStyle | TextStyle> {
-  btn: ViewStyle
-  btnFullWidth: ViewStyle
-  mediumBtn: ViewStyle
-  bigBtn: ViewStyle
-  smallBtn: ViewStyle
-  text: TextStyle
-  mediumText: ViewStyle
-  bigText: ViewStyle
-  smallText: ViewStyle
-  disabled: ViewStyle
-  mediumIcon: ViewStyle
-  bigIcon: ViewStyle
-  smallIcon: ViewStyle
-}
-
-export default StyleSheet.create<Style>({
+export default StyleSheet.create({
   btn: {
     flexDirection: 'row',
     alignItems: 'center',

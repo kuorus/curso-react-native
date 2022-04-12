@@ -1,6 +1,4 @@
-import { TextStyle } from 'react-native'
-
-export const mainFonts: { [key: string]: TextStyle } = {
+export const mainFonts = {
   thin: {
     fontFamily: 'Raleway-ExtraLight',
   },

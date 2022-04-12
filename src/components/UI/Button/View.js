@@ -1,12 +1,11 @@
-import React, { FunctionComponent, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Text, TouchableOpacity } from 'react-native'
 import { capitalize } from 'lodash'
-import { ButtonViewInputProps } from './View.Types'
 import styles from './View.Styles'
 import { mainColors } from '../../../styles/colors'
 import Loader from '../Loader/View'
 
-const ButtonView: FunctionComponent<ButtonViewInputProps> = props => {
+const ButtonView = props => {
   const [isDisabled, setIsDisabled] = useState(props.disabled || false)
   const [showLoader, setShowLoader] = useState(props.isLoading || false)
 
@@ -75,7 +74,7 @@ const ButtonView: FunctionComponent<ButtonViewInputProps> = props => {
 
   const noTextStyles = !props.text && iconBtnStyles
 
-  const _renderIcon = (margin: string) => {
+  const _renderIcon = margin => {
     let iconMargin = `margin${capitalize(margin)}`
     let marginStyles = props.text && { [iconMargin]: 5 }
     let component

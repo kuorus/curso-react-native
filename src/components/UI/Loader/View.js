@@ -1,9 +1,8 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { ActivityIndicator } from 'react-native'
 import { mainColors } from '../../../styles/colors'
-import { LoaderProps } from './View.Types'
 
-const LoaderView: FunctionComponent<LoaderProps> = props => {
+const LoaderView = props => {
   return (
     <ActivityIndicator
       size={props.size || 'small'}
