@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: '#f4f4fa' }}>
         <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
         <CoffeeForm />
         <CoffeeList />
