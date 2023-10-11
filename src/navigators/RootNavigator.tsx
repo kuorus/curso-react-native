@@ -9,9 +9,9 @@ const RootNavigator = () => {
   const Stack = createNativeStackNavigator<RootNavigatorParamList>();
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName={'Inbox'} screenOptions={{ headerShown: false }}>
         <Stack.Screen name="BottomBar" component={BottomBarNavigation} />
-        <Stack.Screen name="Inbox" component={Inbox} />
+        <Stack.Screen name="Inbox" component={Inbox} options={{ headerShown: true }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

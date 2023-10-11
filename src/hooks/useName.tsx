@@ -3,8 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const useName = () => {
   const getAsyncName = async () => {
     try {
-      const name = await AsyncStorage.getItem('user-name');
-      return name;
+      return await AsyncStorage.getItem('user-name');
     } catch (e) {
       console.error(e);
     }

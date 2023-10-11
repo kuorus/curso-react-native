@@ -1,5 +1,5 @@
 import { useFocusEffect } from '@react-navigation/native';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { ScrollView, Text, Button } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import useName from '../hooks/useName';
@@ -13,10 +13,9 @@ const User = ({ navigation }: UserScreenProps) => {
   const { getAsyncName } = useName();
 
   useFocusEffect(() => {
-    (async () => {
-      const asyncName = await getAsyncName();
+    getAsyncName().then(asyncName => {
       asyncName && setName(asyncName);
-    })();
+    })
   });
 
   return (

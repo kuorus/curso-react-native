@@ -10,7 +10,7 @@ function App(): ReactNode {
   return (
     <>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <FlipperAsyncStorage />
+        { __DEV__ && <FlipperAsyncStorage /> }
       <RootNavigator />
     </>
   );
